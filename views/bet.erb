@@ -1,0 +1,16 @@
+<div class = "well">
+  <h3>Please enter your bet to begin your game</h3>
+  <h4> <%= session[:name] %> ,your pocket is : <%= @your_pocket %> $</h4>
+</div>
+
+<div >
+<form class="well col-lg-4 col-lg-offset-4 " action = "/bet" method = "post">
+
+  <div class="form-group " >
+    <label for="bet">Enter your bet:</label>
+    <input type="text" class="form-control" name="bet">
+  </div>
+   
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
