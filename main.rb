@@ -11,7 +11,7 @@ get "/" do
 end
 
 post "/name" do
-  if session[:name] == ""
+  if params[:name] == ""
   	@error = "Please name can't be empty"
   	redirect "/"
   else
