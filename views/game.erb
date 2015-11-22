@@ -2,10 +2,31 @@
 <h3>Your pocket is <%= POCKET %></h3>
 <h3>Your bet is :<%=session[:bet] %></h3>
 
-<div class = "row">
-  <div class= " well col-md-6">
 
+  <div class= " well ">
+   <h4>Dealers cards:</h4>
+   	<% session[:dealer_cards].each do |card| %>
+   		 <%= card_image(card)  %> 
+   	<%end%>
   </div>
-  <div class= " well col-md-6">
+  <br>
+  <div class= " well ">
+  	<h4>Players cards:</h4>
+   	<% session[:player_cards].each do |card| %>
+   		 <%= card_image(card) %> 
+   	<%end%>
+
+   <p>
+   	what would you like to do?
+   Your total is: <%= calculate_total(session[:player_cards]) %>
+   </p> 
+    <div>
+   <% if @show_hit_or_stay_buttons %>
+        <form id="hitf" action = "/game/player/hit" method = "post">
+ 	      <input type = "submit" class = "btn btn-success" value = "Hit"/>
+        </form>
+        <form  id="stayf" action = "/game/player/stay" method = "post">
+ 	      <input type = "submit" class = "btn btn-warning" value = "Stay"/>
+        </form>
+        <% end %>
   </div>
-</div>
