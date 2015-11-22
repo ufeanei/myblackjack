@@ -107,15 +107,17 @@ end
 
 post '/game/player/hit' do
   session[:player_cards] << session[:deck].pop
-  if calculate_total(session[:player_cards]) > 21
-    @error = "Sorry You are busted."
+  if calculate_total(session[:player_cards]) == 21
+    success = "COngrats, #{session[:name]},  you hit blackjack"
+  elsif calculate_total(session[:player_cards]) > 21
+    @error = "Sorry #{session[:name]}, You are busted."
     @show_hit_or_stay_buttons = false
   end
   erb:game
 end
 
 post '/game/player/stay' do
-  @success = "you have chosen to stay"
+  @success = "#{session[:name]},you have chosen to stay"
   @show_hit_or_stay_buttons = false
   erb :game
 end

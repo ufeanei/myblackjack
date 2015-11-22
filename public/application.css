@@ -15,6 +15,10 @@
  .st {text-align: center}
 
  form#hitf {float: left;
- 	margin-right: 10px;}
+ 	margin-right: 10px;}e
 
  form#stayf {float: right}
+
+ img.card_image {
+ 	margin: 0px 5px 5px;
+ }
