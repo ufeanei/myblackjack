@@ -1,14 +1,22 @@
 .front { background-color: #f1f1f1;
-	     border-radius: 20px;
+	     border-radius: 10px;
+	     border-style: solid;
+	     border-color: #A0A0A0;
 	     margin-top: 100px;
+	     border-width; }
 	     
-
-       }
  .well1 { margin: 20px 20px 20px 20px;
  	     background-color: #fff;
- 	     border-radius: 20px   
+ 	     border-radius: 10px; 
+ 	     border-style: solid;
+ 	     border-color: #A0A0A0; 
+ 	     border-width:1px; 
+        }
 
- }
+ .form-group {margin-left: 15px}
+
+ .btn {margin-left: 15px;
+       margin-bottom: 15px}
 
  .aa {height: 5px;}
 
@@ -20,5 +28,5 @@
  form#stayf {float: right}
 
  img.card_image {
- 	margin: 0px 5px 5px;
+ 	margin: 5px 5px 10px 5px;
  }
